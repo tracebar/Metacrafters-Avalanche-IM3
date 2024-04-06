@@ -2,10 +2,10 @@
 pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract Sanjan_token is ERC20 {
+contract Tracer_token is ERC20 {
     address public owner;
 
-    constructor() ERC20("SanjanToken", "STN") {
+    constructor() ERC20("TracerToken", "TRC") {
         owner = msg.sender;
         _mint(msg.sender, 100 * 10**uint(decimals()));
     }
