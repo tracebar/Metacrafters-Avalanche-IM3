@@ -2,10 +2,10 @@
 pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract Sanjan_token is ERC20 {
+contract Tracer_token is ERC20 {
     address public owner;
 
-    constructor() ERC20("SanjanToken", "STN") {
+    constructor() ERC20("TracerToken", "TRC") {
         owner = msg.sender;
         _mint(msg.sender, 100 * 10**uint(decimals()));
     }
@@ -29,7 +29,7 @@ contract Sanjan_token is ERC20 {
         _transfer(from, to, amount);
 
         uint256 currentAllowance = allowance(from, msg.sender);
-        require(currentAllowance >= amount, "Sanjan_token: transfer amount exceeds allowance");
+        require(currentAllowance >= amount, "Tracer_token: transfer amount exceeds allowance");
         
         _approve(from, msg.sender, currentAllowance - amount);
 
